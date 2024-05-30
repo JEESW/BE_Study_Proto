@@ -62,6 +62,7 @@ replay_pid*
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea
 
 # AWS User-specific
 .idea/**/aws.xml
@@ -79,6 +80,7 @@ replay_pid*
 .idea/**/dbnavigator.xml
 
 # Gradle
+est_java.iml
 .idea/**/gradle.xml
 .idea/**/libraries
 
