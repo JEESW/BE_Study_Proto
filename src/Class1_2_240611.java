@@ -5,6 +5,6 @@ public class Class1_2_240611 {
     System.out.println(test1.b);
     System.out.println(test1.good());
     //  test1.add();
-    test1.add2();
+    ClassTest1.add2();
   }
 }
