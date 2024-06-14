@@ -1,13 +1,16 @@
 public class Test {
-  public static void main(String[] args) {
-    //    InheritB inheritB = new InheritB();
-    //
-    //    inheritB.field2 = "필드2";
-    //    inheritB.method2();
-    //
-    //    inheritB.field1 = 100;
-    //    inheritB.method1();
+    public static void main(String[] args){
+        ZooKeeper zooKeeper = new ZooKeeper();
+        Tiger tiger = new Tiger();
+        zooKeeper.feed(tiger);
 
-    InheritB inheritB = new InheritB(1, 2);
-  }
+        Lion lion = new Lion();
+        zooKeeper.feed(lion);
+
+        Rabbit rabbit = new Rabbit();
+        zooKeeper.feed2(rabbit);
+
+        Deer deer = new Deer();
+        zooKeeper.feed2(deer);
+    }
 }

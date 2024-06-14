@@ -1,13 +1,12 @@
 public class Person {
-  String name;
-  String ssn;
+    private String name;
+    private int age;
 
-  public Person(String name, String ssn) {
-    this.name = name;
-    this.ssn = ssn;
-  }
-
-  public void say() {
-    System.out.println("my name is = " + this.name);
-  }
+    public Person(String name, int age) throws InvalidAgeException {
+        this.name = name;
+        if (age < 0) {
+            throw new InvalidAgeException("나이는 자연수여야 합니다.");
+        }
+        this.age = age;
+    }
 }
