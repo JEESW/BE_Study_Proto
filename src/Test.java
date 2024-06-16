@@ -26,6 +26,7 @@ public class Test {
     shoppingMall.addProduct(f2);
     shoppingMall.displayProducts(2, 3);
 
+    System.out.println();
     System.out.println("checkOrderAvailability c1?");
     System.out.println(shoppingMall.checkOrderAvailability(c1));
     System.out.println("checkOrderAvailability c2?");
