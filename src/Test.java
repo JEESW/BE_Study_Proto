@@ -1,6 +1,6 @@
 public class Test {
   public static void main(String[] args) {
-    ShoppingMall shoppingMall = new ShoppingMall(2);
+    ShoppingMall shoppingMall = new PremiumShoppingMall(2);
 
     Clothing c1 = new Clothing("한복", 300000, 5, "XL");
     Clothing c2 = new Clothing("무난한 셔츠", 35000, 31, "M");
@@ -25,5 +25,10 @@ public class Test {
     shoppingMall.addProduct(f1);
     shoppingMall.addProduct(f2);
     shoppingMall.displayProducts(2, 3);
+
+    System.out.println("checkOrderAvailability c1?");
+    System.out.println(shoppingMall.checkOrderAvailability(c1));
+    System.out.println("checkOrderAvailability c2?");
+    System.out.println(shoppingMall.checkOrderAvailability(c2));
   }
 }

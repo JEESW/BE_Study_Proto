@@ -1,4 +1,4 @@
-public class ShoppingMall {
+public abstract class ShoppingMall {
   private Product[] p;
   private int last;
   private int len;
@@ -135,24 +135,42 @@ public class ShoppingMall {
   public void displayProducts() {
     System.out.println();
     for (int i = 0; i <= this.last; i++) {
-      System.out.println(this.p[i].getName() + " (가격: " + this.p[i].calculatePrice() + "원)");
+      System.out.println(this.p[i].getName() + " (판매 가격: " + this.p[i].calculatePrice() + "원)");
     }
     System.out.println();
   }
 
   public void displayProducts(int start) {
     System.out.println();
-    for (int i = start; i <= this.last; i++) {
-      System.out.println(this.p[i].getName() + " (가격: " + this.p[i].calculatePrice() + "원)");
+
+    if (start < 0 || start > this.last) {
+      System.out.println("올바른 범위의 값을 입력하세요!");
+      System.out.println();
+      return;
     }
+
+    for (int i = start; i <= this.last; i++) {
+      System.out.println(this.p[i].getName() + " (판매 가격: " + this.p[i].calculatePrice() + "원)");
+    }
+
     System.out.println();
   }
 
   public void displayProducts(int start, int end) {
     System.out.println();
-    for (int i = start; i < end; i++) {
-      System.out.println(this.p[i].getName() + " (가격: " + this.p[i].calculatePrice() + "원)");
+
+    if (start < 0 || start >= end || end > this.last + 1) {
+      System.out.println("올바른 범위의 값을 입력하세요!");
+      System.out.println();
+      return;
     }
+
+    for (int i = start; i < end; i++) {
+      System.out.println(this.p[i].getName() + " (판매 가격: " + this.p[i].calculatePrice() + "원)");
+    }
+
     System.out.println();
   }
+
+  public abstract boolean checkOrderAvailability(Product product);
 }
