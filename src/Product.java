@@ -1,20 +1,39 @@
-public class Product<T, M> {
-  private T kind;
-  private M model;
+public class Product {
+    private String name;
+    private int price;
+    private int stock;
 
-  public T getKind() {
-    return kind;
-  }
+    Product(String name, int price, int stock) {
+        this.name = name;
+        this.price = price;
+        this.stock = stock;
+    }
 
-  public M getModel() {
-    return model;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public void setKind(T kind) {
-    this.kind = kind;
-  }
+    public int getPrice() {
+        return price;
+    }
 
-  public void setModel(M model) {
-    this.model = model;
-  }
+    public int getStock() {
+        return stock;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public int calculatePrice() {
+        return this.price;
+    }
 }
